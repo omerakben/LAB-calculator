@@ -1,0 +1,1 @@
+console.log('Calculator by Ozzy!');

@@ -1,48 +1,47 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <div class="calculator">
-            <!-- Calculator Display -->
-            <div class="calculator-display">
-                <input type="text" class="calculator-display-screen" disabled>
-            </div>
+  <div class="calculator">
+    <!-- Display screen -->
+    <div class="calculator-screen">
+      <input type="text" class="screen" value="0" disabled />
+    </div>
 
-            <!-- Calculator Buttons -->
-             <div class="calculator-buttons">
-                <!-- Row 1st -->
-                 <button class="btn">C</button>
-                 <button class="btn">&larr;</button>
-                 <button class="btn function">&divide;</button>
+    <!-- Calculator buttons using grid -->
+    <div class="calculator-buttons">
+      <!-- First row buttons (3 buttons) -->
+      <button class="btn clear">C</button>
+      <button class="btn">&larr;</button>
+      <button class="btn function">&divide;</button>
+      
+      <!-- Second row buttons (4 buttons) -->
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn function">&times;</button>
 
-                <!-- Row 2nd -->
-                 <button class="btn">7</button>
-                 <button class="btn">8</button>
-                 <button class="btn">9</button>
-                 <button class="btn function">&times;</button>
-
-                <!-- Row 3rd -->
-                 <button class="btn">4</button>
-                 <button class="btn">5</button>
-                 <button class="btn">6</button>
-                 <button class="btn function">&minus;</button>
-
-                <!-- Row 4th -->
-                 <button class="btn">1</button>
-                 <button class="btn">2</button>
-                 <button class="btn">3</button>
-                 <button class="btn function">&plus;</button>
-
-                <!-- Row 5th -->
-                 <button class="btn">0</button>
-                 <button class="btn function">&equals;</button>
-             </div>
-        </div>
-    </main>
+      <!-- Third row buttons (4 buttons) -->
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn function">&minus;</button>
+      
+      <!-- Fourth row buttons (4 buttons) -->
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn function">&plus;</button>
+      
+      <!-- Last row buttons (2 buttons) -->
+      <button class="btn zero">0</button>
+      <button class="btn equals function">&equals;</button>
+    </div>
+  </div>
 </body>
 </html>
