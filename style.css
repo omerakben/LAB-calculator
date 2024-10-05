@@ -1,0 +1,112 @@
+/* Reset border-box and margin/padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body to use the */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+  width: 400px;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+/* Calculator screen */
+.calculator-screen {
+  margin-bottom: 10px;
+}
+
+/* Calculator screen container */
+.screen {
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: right;
+  padding: 5px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Grid for calculator buttons */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns, later override 3 and 2*/
+  grid-gap: 2.5px;
+  align-items: stretch;
+}
+
+/* Calculator button */
+.btn {
+  background-color: #d8d9db;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background-color 0.1s, transform 0.1s ease-in-out;
+  text-align: center;
+  height: 80px; /* All buttons same height */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for all buttons */
+.btn:hover {
+  background-color: #c1c2c3;
+  transform: scale(1.05);
+}
+
+/* Function buttons background */
+.btn.function {
+  background-color: #df974c;
+  color: white;
+}
+
+/* Function buttons hover effect */
+.btn.function:hover {
+  background-color: #e68a42;
+  transform: scale(1.05);
+}
+
+/* Function buttons active */
+.btn.function:active {
+  background-color: #dd8d37;
+  transform: scale(0.9);
+}
+
+/* Zero button spanning two columns */
+.zero {
+  grid-column: span 3;
+}
+
+/* Clear button spanning two columns */
+.clear {
+  grid-column: span 2;
+}
+
+/* Clear button hover effect */
+.clear:hover {
+  background-color: #ffffff;
+  color: #dd8d37;
+}
+
+/* Equal button rotate */
+.equals:hover {
+  transform: rotate(0.5turn);
+}
