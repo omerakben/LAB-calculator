@@ -5,39 +5,42 @@
   padding: 0;
 }
 
-/* Body to use the */
+/* Body styles */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f0f0f0;
   font-family: 'Arial', sans-serif;
+  padding: 20px;
 }
 
 /* Calculator container */
 .calculator {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   background-color: #000000;
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
+
 /* Calculator screen */
 .calculator-screen {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* Calculator screen container */
 .screen {
   width: 100%;
-  height: 60px;
-  background-color: #000000;
+  height: 80px;
+  background-color: #1c1c1c;
   color: #ffffff;
   text-align: right;
-  padding: 5px;
-  font-size: 2rem;
+  padding: 10px 20px;
+  font-size: 2.5rem;
   border: none;
   border-radius: 5px;
   box-shadow: inset 0px 2px 5px rgba(255, 255, 255, 0.1);
@@ -46,67 +49,83 @@ body {
 /* Grid for calculator buttons */
 .calculator-buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns, later override 3 and 2*/
-  grid-gap: 2.5px;
-  align-items: stretch;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
 /* Calculator button */
 .btn {
-  background-color: #d8d9db;
-  color: #000000;
+  background-color: #333333;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
-  padding: 5px;
-  font-size: 2rem;
+  padding: 20px 10px;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: background-color 0.1s, transform 0.1s ease-in-out;
+  transition: background-color 0.2s, transform 0.1s ease-in-out;
   text-align: center;
-  height: 80px; /* All buttons same height */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover effect for all buttons */
 .btn:hover {
-  background-color: #c1c2c3;
+  background-color: #4d4d4d;
   transform: scale(1.05);
 }
 
 /* Function buttons background */
 .btn.function {
-  background-color: #df974c;
-  color: white;
+  background-color: #ff9500;
 }
 
 /* Function buttons hover effect */
 .btn.function:hover {
-  background-color: #e68a42;
-  transform: scale(1.05);
+  background-color: #ffaa33;
 }
 
 /* Function buttons active */
 .btn.function:active {
-  background-color: #dd8d37;
-  transform: scale(0.9);
+  background-color: #ff8000;
+  transform: scale(0.95);
 }
 
 /* Zero button spanning two columns */
 .zero {
-  grid-column: span 3;
+  grid-column: span 2;
 }
 
-/* Clear button spanning two columns */
+/* Clear button */
 .clear {
-  grid-column: span 2;
+  background-color: #ff3b30;
 }
 
 /* Clear button hover effect */
 .clear:hover {
-  background-color: #ffffff;
-  color: #dd8d37;
+  background-color: #ff6961;
 }
 
-/* Equal button rotate */
+/* Equal button styles */
+.equals {
+  background-color: #34c759;
+}
+
 .equals:hover {
-  transform: rotate(0.5turn);
+  background-color: #4cd964;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 10px;
+  }
+
+  .screen {
+    height: 60px;
+    font-size: 2rem;
+    padding: 5px 10px;
+  }
+
+  .btn {
+    padding: 15px 5px;
+    font-size: 1.2rem;
+  }
 }
