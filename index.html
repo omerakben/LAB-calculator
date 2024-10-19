@@ -10,14 +10,15 @@
   <div class="calculator">
     <!-- Display screen -->
     <div class="calculator-screen">
-      <input type="text" class="screen" value="0" disabled />
+      <input type="text" class="screen" value="0" readonly />
     </div>
 
     <!-- Calculator buttons using grid -->
     <div class="calculator-buttons">
-      <!-- First row buttons (3 buttons) -->
+      <!-- First row buttons (4 buttons) -->
       <button class="btn clear">C</button>
-      <button class="btn">&larr;</button>
+      <button class="btn function">&larr;</button>
+      <button class="btn function">%</button>
       <button class="btn function">&divide;</button>
       
       <!-- Second row buttons (4 buttons) -->
@@ -38,10 +39,12 @@
       <button class="btn">3</button>
       <button class="btn function">&plus;</button>
       
-      <!-- Last row buttons (2 buttons) -->
+      <!-- Last row buttons (3 buttons) -->
       <button class="btn zero">0</button>
+      <button class="btn">.</button>
       <button class="btn equals function">&equals;</button>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
